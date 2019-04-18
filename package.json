@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",
     "start": "node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"
@@ -21,7 +22,8 @@
     "knex": "^0.16.5",
     "morgan": "^1.9.1",
     "pg": "^7.9.0",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "xss": "^1.0.6"
   },
   "devDependencies": {
     "chai": "^4.2.0",
